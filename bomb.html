@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOMB</title>
+</head>
+<body>
+    <h1>You are baka!</h1>
+    <script>
+        var audio = new Audio('baka-cirno.wav');
+        var left = 0;
+        var tophei = 0;
+
+        function bomb(){
+            left = left + Math.floor(Math.random() * window.screen.width);
+            tophei = tophei + Math.floor(Math.random() * window.screen.height);
+
+            audio.play();
+            
+            window.open("bomb.html", "", "screenX=" + left + ",screenY=" + tophei + ",width=250,height=150");
+        };
+
+        setInterval(bomb, 100);
+    </script>
+</body>
+</html>
