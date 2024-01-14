@@ -8,7 +8,7 @@ document.addEventListener('keydown', function(event) {
         window.close();
     }
 
-    if(event.ctrlKey && event.shiftKey && event.altKey && event.key === 'G' || event.key === 'B') {
+    if(event.ctrlKey && event.altKey && event.shiftKey && event.key === 'G' || event.key === 'B') {
         if(attempts == 1){
             bomb();
         } else {
@@ -19,9 +19,9 @@ document.addEventListener('keydown', function(event) {
 });
 
 function code(length) {
-    let combination = '';
+    var combination = '';
 
-    for (let i = 0; i < length; i++) {
+    for (var i = 0; i < length; i++) {
       const randomDigit = Math.floor(Math.random() * 10);
       combination += randomDigit.toString();
     }
@@ -66,7 +66,7 @@ function bomb(){
     var tophei = tophei + Math.floor(Math.random() * window.screen.height);
 
     if(window.popupBlocked){
-        window.open("bomb.html", "_blank",);
+        window.open("bomb.html", "_blank");
     } else {
         window.open("bomb.html", "popup", "screenX=" + left + ",screenY=" + tophei + ",width=250,height=150");
     }
