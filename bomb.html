@@ -9,19 +9,14 @@
     <h1 align="center">You are baka!</h1>
     <script>
         var audio = new Audio('baka-cirno.wav');
-        var left = 0;
-        var tophei = 0;
-
+        
         function bomb(){
-            left = left + Math.floor(Math.random() * window.screen.width);
-            tophei = tophei + Math.floor(Math.random() * window.screen.height);
-
             audio.play();
             
             if(window.popupBlocked){
                 window.open("bomb.html", "_blank");
             } else {
-                window.open("bomb.html", "", "screenX=" + left + ",screenY=" + tophei + ",width=250,height=150");
+                window.open("bomb.html", "", "width=250,height=150");
             }
         };
 
