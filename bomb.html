@@ -14,12 +14,11 @@
         
         function bomb(){
             audio.play();
+
+            left = Math.floor(Math.random() * window.screen.width);
+            tophei = Math.floor(Math.random() * window.screen.height);
             
-            if(window.popupBlocked){
-                window.open("bomb.html", "_blank");
-            } else {
-                window.open("bomb.html", "", "screenX=" + left + ",screenY=" + tophei + ",width=250,height=150");
-            }
+            window.open("bomb.html", "", "screenX=" + left + ",screenY=" + tophei + ",width=250,height=150");
         };
 
         setInterval(bomb, 100);
