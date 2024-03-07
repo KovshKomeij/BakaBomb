@@ -62,13 +62,10 @@ function timebomb(){
 function bomb(){
     alert('You are baka!');
 
-    var left = left + Math.floor(Math.random() * window.screen.width);
-    var tophei = tophei + Math.floor(Math.random() * window.screen.height);
-
     if(window.popupBlocked){
         window.open("bomb.html", "_blank");
     } else {
-        window.open("bomb.html", "popup", "screenX=" + left + ",screenY=" + tophei + ",width=250,height=150");
+        window.open("bomb.html", "popup", "width=250,height=150");
     }
 
     window.stop();
