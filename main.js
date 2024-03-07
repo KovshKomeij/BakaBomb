@@ -61,12 +61,8 @@ function timebomb(){
 
 function bomb(){
     alert('You are baka!');
-
-    if(window.popupBlocked){
-        window.open("bomb.html", "_blank");
-    } else {
-        window.open("bomb.html", "popup", "width=250,height=150");
-    }
+    
+    window.open("bomb.html", "popup", "width=250,height=150");
 
     window.stop();
 }
